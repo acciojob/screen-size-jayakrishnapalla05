@@ -1,12 +1,6 @@
-//your JS code here. If required.
-const sizeInfo=document.querySelector("#sizeInfo");
-const width=document.querySelector("h1:first-child");
-const height=document.querySelector("h1:last-child");
-
-function screensize(){
-	width.innerText='Width: ${document.body.clientWidth}px';
-	height.innerText='Height: ${document.body.clientHeight}px';
-	
+function getSize(){
+    let width = document.documentElement.clientWidth;
+    let height = document.documentElement.clientHeight;
+    let div = document.querySelector("#sizeInfo");
+    div.innerHTML = `<h1> Width: ${width} and Height: ${height} </h1>`;
 }
-window.addEventListener('resize', screensize);
-screensize();
